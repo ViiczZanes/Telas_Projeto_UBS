@@ -48,8 +48,10 @@ sidebarToggle.addEventListener("click", () => {
 
 const consultas = document.querySelector('#consultas'),
       meuperfil = document.querySelector('#meuperfil'),
+      agendamento = document.querySelector('#agendamento')
       content_consultas = document.querySelector('#content_consultas'),
-      content_myprofile = document.querySelector('#my_profile')
+      content_myprofile = document.querySelector('#my_profile'),
+      content_agendamento = document.querySelector('#content_agendamento')
       
 
 
@@ -57,10 +59,18 @@ const consultas = document.querySelector('#consultas'),
       consultas.addEventListener('click', ()=>{
           content_myprofile.style.display = 'none'
           content_consultas.style.display = 'block'
+          content_agendamento.style.display = 'none'
       })
 
 
       meuperfil.addEventListener('click', ()=>{
         content_myprofile.style.display = 'block'
         content_consultas.style.display = 'none'
+        content_agendamento.style.display = 'none'
+    })
+
+    agendamento.addEventListener('click', ()=>{
+        content_myprofile.style.display = 'none'
+        content_consultas.style.display = 'none'
+        content_agendamento.style.display = 'block'
     })
